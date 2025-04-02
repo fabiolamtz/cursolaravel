@@ -59,6 +59,7 @@ route::controller(PostController::class)->group(function () {
     route::get('/posts', 'index')->name('posts.index');
     route::get('/posts/create', 'create')->name('posts.create');
     route::post('/posts', 'store')->name('posts.store');
+    route::get('/posts/show', 'show')->name('posts.show');
     route::get('posts/delete/{id}', 'destroy')->name('posts.destroy');
 });
 

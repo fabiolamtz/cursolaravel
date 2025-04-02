@@ -20,9 +20,21 @@ class PostController extends Controller
 
     }
 
-    public function show($id)
+    public function show(Request $request)
     {
-        return view('posts.show', ['post' => $this->posts[$id]]);
+        $datos = $request->all();
+
+        // Retornar la vista del reporte con los datos
+        return view('posts.show', compact('datos'))
+            ->with('posts', $this->posts);
+
+
+       /* return view('posts.show')
+            ->with('posts', $this->posts);
+
+    // Retornar la vista con los datos
+    return view('posts.show')
+            ->with('posts', $this->posts);*/
     }
 
     public function store(Request $request)
