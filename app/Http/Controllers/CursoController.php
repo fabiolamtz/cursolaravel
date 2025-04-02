@@ -29,4 +29,9 @@ class CursoController extends Controller
         return 'la division es: ' . ($x / $y);
     }
 
+    public function index()
+    {
+        return view('layout.chail');
+    }
+
 }
