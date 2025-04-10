@@ -21,8 +21,8 @@
                  <th scope="col">ID</th>
                  <th scope="col">Nombre</th>
                  <th scope="col">Descripción</th>
-                 <th scope="col">Precio</th>
-                 <th scope="col">Stock</th>
+                 <th scope="col">Precio Unitario</th>
+                 <th scope="col">Stock Disponible</th>
                  <th scope="col">Acciones</th>
              </tr>
          </thead>

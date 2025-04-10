@@ -1,6 +1,6 @@
 @extends('layout.productos')
 
- @section('titulo', 'Nuevo producto')
+ @section('titulo', 'Modificar Productos')
 
  @section('contenido')
      <div class="text-center">
