@@ -70,7 +70,7 @@
      /**
       * Update the specified resource in storage.
       */
-     public function update(Request $request, string $id)
+     public function update(StoreUsuarioRequest $request, string $id)
      {
          $usuario = Users::where('idUsuario', $id)
          ->update([

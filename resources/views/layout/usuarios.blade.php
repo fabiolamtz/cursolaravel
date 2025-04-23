@@ -8,15 +8,17 @@
          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
          <title>@yield('titulo') | Curso Avanzado de Laravel</title>
          <style>
-             .footer{
-                 position: fixed;
-                 bottom: 0;
-                 left: 0;
-                 right: 0;
-                 width: 100%;
-                 padding: 10px;
-             }
-
+                body, html {
+                height: 100%;
+                }
+                .wrapper {
+                    min-height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                }
+                main {
+                    flex: 1;
+                }
          </style>
      </head>
      <body>
