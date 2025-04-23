@@ -1,14 +1,14 @@
 @extends('layout.usuarios')
 
- @section('titulo', 'Nuevos Usuarios')
+@section('titulo', 'Nuevos Usuarios')
 
- @section('contenido')
-     <div class="text-center">
-         <h1 class="m-5">Registrar Nuevos Usuarios</h1>
-     </div>
-     <form action="{{route('usuarios.store')}}" method="POST">
-         @csrf
-         <div class="row">
+@section('contenido')
+    <div class="text-center">
+        <h1 class="m-5">Registrar Nuevos Usuarios</h1>
+    </div>
+    <form action="{{ route('usuarios.store') }}" method="POST">
+        @csrf
+        <div class="row">
             <div class="col-md-6">
                 <div class="mb-3">
                     <label for="nombre" class="form-label">Nombre del usuario</label>
@@ -16,7 +16,6 @@
                     @error('nombre')<div class="invalid-feedback">{{ $message }}</div>@enderror
                 </div>
             </div>
-
             <div class="col-md-6">
                 <div class="mb-3">
                     <label for="apellidos" class="form-label">Apellidos</label>
@@ -24,7 +23,6 @@
                     @error('apellidos')<div class="invalid-feedback">{{ $message }}</div>@enderror
                 </div>
             </div>
-
             <div class="col-md-6">
                 <div class="mb-3">
                     <label for="fecha_nacimiento" class="form-label">Fecha de Nacimiento</label>
@@ -32,7 +30,6 @@
                     @error('fecha_nacimiento')<div class="invalid-feedback">{{ $message }}</div>@enderror
                 </div>
             </div>
-
             <div class="col-md-6">
                 <div class="mb-3">
                     <label for="email" class="form-label">Correo Electrónico</label>
@@ -40,7 +37,6 @@
                     @error('email')<div class="invalid-feedback">{{ $message }}</div>@enderror
                 </div>
             </div>
-
             <div class="col-md-6">
                 <div class="mb-3">
                     <label for="password" class="form-label">Contraseña</label>
@@ -55,7 +51,6 @@
                     @error('telefono')<div class="invalid-feedback">{{ $message }}</div>@enderror
                 </div>
             </div>
-
             <div class="col-md-12">
                 <div class="mb-3">
                     <label for="direccion" class="form-label">Dirección</label>
@@ -63,7 +58,6 @@
                     @error('direccion')<div class="invalid-feedback">{{ $message }}</div>@enderror
                 </div>
             </div>
-
             <div class="col-md-6">
                 <div class="mb-3">
                     <label for="ciudad" class="form-label">Ciudad</label>
@@ -71,7 +65,6 @@
                     @error('ciudad')<div class="invalid-feedback">{{ $message }}</div>@enderror
                 </div>
             </div>
-
             <div class="col-md-6">
                 <div class="mb-3">
                     <label for="estado" class="form-label">Estado</label>
@@ -79,7 +72,6 @@
                     @error('estado')<div class="invalid-feedback">{{ $message }}</div>@enderror
                 </div>
             </div>
-
             <div class="col-md-6">
                 <div class="mb-3">
                     <label for="codigo_postal" class="form-label">Código Postal</label>
@@ -87,7 +79,6 @@
                     @error('codigo_postal')<div class="invalid-feedback">{{ $message }}</div>@enderror
                 </div>
             </div>
-
             <div class="col-md-6">
                 <div class="mb-3">
                     <label for="cargo" class="form-label">Cargo</label>
@@ -95,16 +86,16 @@
                     @error('cargo')<div class="invalid-feedback">{{ $message }}</div>@enderror
                 </div>
             </div>
-             <div class="col-md-6">
+            <div class="col-md-6">
                 <div class="mb-3">
                     <button type="submit" class="btn btn-success w-100">Guardar Usuario</button>
                 </div>
             </div>
-             <div class="col-md-6">
-                 <div class="mb-3">
-                     <a href="{{route('usuarios.index')}}" class="btn btn-primary w-100">Regresar</a>
-                 </div>
-             </div>
-         </div>
-     </form>
- @endsection
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <a href="{{ route('usuarios.index') }}" class="btn btn-primary w-100">Regresar</a>
+                </div>
+            </div>
+        </div>
+    </form>
+@endsection

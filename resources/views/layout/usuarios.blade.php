@@ -50,8 +50,8 @@
                                    <li><a class="dropdown-item" href="#">Otro submodulo</a></li>
                                    <li><a class="dropdown-item" href="#">Otro submodulo</a></li>
                                  </ul>
-                             </li>-->
-                         </ul>
+                             </li>
+                         </ul>-->
                      </div>
                  </div>
              </nav>
