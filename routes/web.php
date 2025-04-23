@@ -4,6 +4,7 @@ use App\Http\Controllers\CursoController;
 use App\Http\Controllers\AdminUserController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProductosController;
+use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -64,7 +65,7 @@ route::controller(PostController::class)->group(function () {
     route::get('posts/delete/{id}', 'destroy')->name('posts.destroy');
 });
 
-
+//Productos
 Route::get('/', function () {
     return view('welcome');
     return redirect()->route('productos.index');
@@ -80,5 +81,23 @@ Route::prefix('productos')
      Route::get('/edit/{id}', 'edit')->name('edit'); // Muestra el formulario para editar un producto
      Route::post('/update/{id}', 'update')->name('update'); // Actualiza un producto
      Route::get('/destroy/{id}', 'destroy')->name('destroy'); // Elimina un producto
+ });
+
+//Usuarios
+Route::get('/', function () {
+    return view('welcome');
+    return redirect()->route('user.index');
+});
+
+Route::prefix('usuarios')
+ ->name('usuarios.')
+ ->controller(UsersController::class)->group(function () {
+     Route::get('/index', 'index')->name('index'); // Lista todos de usuarios
+     Route::get('/create', 'create')->name('create'); // Muestra el formulario para crear nuevos usuarios
+     Route::post('/store', 'store')->name('store'); // Crea un nuevo usuario
+     Route::get('/show/{id}', 'show')->name('show'); // Muestra un usuario
+     Route::get('/edit/{id}', 'edit')->name('edit'); // Muestra el formulario para editar un usuaurio
+     Route::post('/update/{id}', 'update')->name('update'); // Actualiza un usuario
+     Route::get('/destroy/{id}', 'destroy')->name('destroy'); // Elimina un usuario
  });
 
